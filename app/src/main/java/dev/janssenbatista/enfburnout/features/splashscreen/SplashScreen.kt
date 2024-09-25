@@ -19,15 +19,23 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import cafe.adriel.voyager.core.screen.Screen
+import cafe.adriel.voyager.navigator.LocalNavigator
+import cafe.adriel.voyager.navigator.currentOrThrow
 import dev.janssenbatista.enfburnout.R
+import dev.janssenbatista.enfburnout.features.home.HomeScreen
+import kotlinx.coroutines.delay
 
 object SplashScreen : Screen {
     private fun readResolve(): Any = SplashScreen
 
     @Composable
     override fun Content() {
-        LaunchedEffect(key1 = Unit) {
 
+        val navigator = LocalNavigator.currentOrThrow
+
+        LaunchedEffect(key1 = Unit) {
+            delay(3_000) // 3 seconds
+            navigator.replace(HomeScreen)
         }
 
         Column(
