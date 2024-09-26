@@ -18,6 +18,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.core.screen.Screen
 import dev.janssenbatista.enfburnout.R
+import dev.janssenbatista.enfburnout.components.Subtitle
 import dev.janssenbatista.enfburnout.features.whatis.WhatIsScreen.Content
 
 object WhatIsScreen : Screen {
@@ -36,7 +37,7 @@ object WhatIsScreen : Screen {
                 painter = painterResource(id = R.drawable.burnout_pic_2),
                 contentDescription = null,
                 modifier = Modifier
-                    .height(300.dp)
+                    .height(200.dp)
                     .fillMaxWidth(),
                 contentScale = ContentScale.Crop
             )
@@ -44,6 +45,18 @@ object WhatIsScreen : Screen {
             Text(text = stringResource(R.string.burnout_content_2))
             Text(text = stringResource(R.string.burnout_content_3))
             Text(text = stringResource(R.string.burnout_content_4))
+            Subtitle(text = stringResource(R.string.burnout_subtitle_1))
+            Image(
+                painter = painterResource(id = R.drawable.burnout_pic_3),
+                contentDescription = null,
+                modifier = Modifier
+                    .height(200.dp)
+                    .fillMaxWidth(),
+                contentScale = ContentScale.Crop
+            )
+            Text(text = stringResource(R.string.burnout_content_5))
+            Subtitle(text = stringResource(R.string.burnout_subtitle_2))
+            Text(text = stringResource(R.string.burnout_content_6))
         }
     }
 
