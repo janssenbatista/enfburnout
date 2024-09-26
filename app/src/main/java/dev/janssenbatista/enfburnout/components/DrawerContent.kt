@@ -9,7 +9,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.automirrored.filled.Article
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -63,12 +63,12 @@ fun DrawerContent(
         }
         HorizontalDivider(Modifier.padding(vertical = 8.dp))
         NavigationDrawerItem(
-            label = { Text(text = "Início") },
+            label = { Text(text = "Síndrome de Burnout") },
             selected = navigator.lastItem::class.simpleName == HomeScreen::class.simpleName,
             onClick = { onMenuClick(HomeScreen) },
             icon = {
                 Icon(
-                    imageVector = Icons.Default.Home,
+                    imageVector = Icons.AutoMirrored.Filled.Article,
                     contentDescription = HomeScreen.TITLE
                 )
             })
