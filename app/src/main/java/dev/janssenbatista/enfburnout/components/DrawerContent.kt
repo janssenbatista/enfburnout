@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Article
+import androidx.compose.material.icons.filled.ContactPhone
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -29,6 +30,7 @@ import cafe.adriel.voyager.navigator.Navigator
 import dev.janssenbatista.enfburnout.R
 import dev.janssenbatista.enfburnout.features.home.HomeScreen
 import dev.janssenbatista.enfburnout.features.other_diseases.OtherDiseasesScreen
+import dev.janssenbatista.enfburnout.features.support_services.SupportServicesScreen
 import dev.janssenbatista.enfburnout.features.take_care.TakeCareScreen
 
 @Composable
@@ -92,6 +94,16 @@ fun DrawerContent(
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.Article,
                     contentDescription = TakeCareScreen.TITLE
+                )
+            })
+        NavigationDrawerItem(
+            label = { Text(text = SupportServicesScreen.TITLE) },
+            selected = navigator.lastItem::class.simpleName == SupportServicesScreen::class.simpleName,
+            onClick = { onMenuClick(SupportServicesScreen) },
+            icon = {
+                Icon(
+                    imageVector = Icons.Filled.ContactPhone,
+                    contentDescription = SupportServicesScreen.TITLE
                 )
             })
     }
