@@ -11,4 +11,11 @@
     <string name="burnout_subtitle_2">Sintomas Recorrentes</string>
     <string name="burnout_content_5">O diagnostico acontece com médico ou psicólogo especialista em saúde do trabalhador ou saúde mental, exclusivamente. Geralmente, com ambos os profissionais para fechar o laudo.</string>
     <string name="burnout_content_6">"Estresse; ansiedade, fadiga, frustração, tristeza, medo, fragilidade para o choro, apatia, bipolaridade, insensibilidade, irritação, dores musculares, cefaleia, taquicardia, sudorese, desvalorização profissional, desmoralização da carreira profissional, baixa remuneração salarial, desmotivação. "</string>
+    <string name="other_content">Você sabia que o esgotamento profissional pode ter causalidade com outras doenças?</string>
+    <string name="depression">Depressão</string>
+    <string name="depression_content">Depressão é uma das doenças mais diagnosticadas e observadas no ambiente de trabalho, sendo uma doença psiquiátrica, que pode afetar a pessoa causando uma tristeza profunda, uma sensação de desesperança e finalidade da vida. Faz com que pessoa não prossiga com atividades cotidianas, como funções do lar, autocuidado, e realização da profissão, sendo em seu caso mais grave a depressão maior.</string>
+    <string name="stress">Estresse</string>
+    <string name="stress_content">O estresse é uma reação a um evento de medo, angustia e aflição que acontece por situações de preocupação e esgotamento. O estresse esta associado ao acumulo de tensão, trabalho e cansaço físico, que pode desencadear uma reação agressiva e intensa para a pessoa e o ambiente que esta.</string>
+    <string name="anxiety">Ansiedade</string>
+    <string name="anxiety_content">A ansiedade virou uma pauta constante em todas as faixas etárias nos últimos 10 anos, isso é reflexo da projeção do futuro, de situações que ainda não aconteceram, causando sentimentos de aflição, nervosismo e preocupação constante. Sendo um sentimento e reação natural do corpo, quando constante, a ansiedade se torna uma doença seria que pode dificultar a vida da pessoa.</string>
 </resources>

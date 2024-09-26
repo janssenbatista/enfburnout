@@ -28,6 +28,7 @@ import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.Navigator
 import dev.janssenbatista.enfburnout.R
 import dev.janssenbatista.enfburnout.features.home.HomeScreen
+import dev.janssenbatista.enfburnout.features.other_diseases.OtherDiseasesScreen
 
 @Composable
 fun DrawerContent(
@@ -63,13 +64,23 @@ fun DrawerContent(
         }
         HorizontalDivider(Modifier.padding(vertical = 8.dp))
         NavigationDrawerItem(
-            label = { Text(text = "Síndrome de Burnout") },
+            label = { Text(text = HomeScreen.TITLE) },
             selected = navigator.lastItem::class.simpleName == HomeScreen::class.simpleName,
             onClick = { onMenuClick(HomeScreen) },
             icon = {
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.Article,
                     contentDescription = HomeScreen.TITLE
+                )
+            })
+        NavigationDrawerItem(
+            label = { Text(text = OtherDiseasesScreen.TITLE) },
+            selected = navigator.lastItem::class.simpleName == OtherDiseasesScreen::class.simpleName,
+            onClick = { onMenuClick(OtherDiseasesScreen) },
+            icon = {
+                Icon(
+                    imageVector = Icons.AutoMirrored.Filled.Article,
+                    contentDescription = OtherDiseasesScreen.TITLE
                 )
             })
     }

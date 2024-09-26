@@ -32,6 +32,7 @@ import cafe.adriel.voyager.navigator.Navigator
 import dev.janssenbatista.enfburnout.components.DrawerContent
 import dev.janssenbatista.enfburnout.components.QuestionHintDialog
 import dev.janssenbatista.enfburnout.features.home.HomeScreen
+import dev.janssenbatista.enfburnout.features.other_diseases.OtherDiseasesScreen
 import dev.janssenbatista.enfburnout.features.splashscreen.SplashScreen
 import dev.janssenbatista.enfburnout.features.talk.TalkScreen
 import dev.janssenbatista.enfburnout.features.whatis.WhatIsScreen
@@ -132,5 +133,6 @@ private fun getTopBarTitle(navigator: Navigator): String =
         HomeScreen::class.simpleName -> HomeScreen.TITLE
         TalkScreen::class.simpleName -> TalkScreen.TITLE
         WhatIsScreen::class.simpleName -> WhatIsScreen.TITLE
+        OtherDiseasesScreen::class.simpleName -> OtherDiseasesScreen.TITLE
         else -> ""
     }
