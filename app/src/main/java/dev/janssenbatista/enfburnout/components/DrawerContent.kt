@@ -29,6 +29,7 @@ import cafe.adriel.voyager.navigator.Navigator
 import dev.janssenbatista.enfburnout.R
 import dev.janssenbatista.enfburnout.features.home.HomeScreen
 import dev.janssenbatista.enfburnout.features.other_diseases.OtherDiseasesScreen
+import dev.janssenbatista.enfburnout.features.take_care.TakeCareScreen
 
 @Composable
 fun DrawerContent(
@@ -81,6 +82,16 @@ fun DrawerContent(
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.Article,
                     contentDescription = OtherDiseasesScreen.TITLE
+                )
+            })
+        NavigationDrawerItem(
+            label = { Text(text = TakeCareScreen.TITLE) },
+            selected = navigator.lastItem::class.simpleName == TakeCareScreen::class.simpleName,
+            onClick = { onMenuClick(TakeCareScreen) },
+            icon = {
+                Icon(
+                    imageVector = Icons.AutoMirrored.Filled.Article,
+                    contentDescription = TakeCareScreen.TITLE
                 )
             })
     }
