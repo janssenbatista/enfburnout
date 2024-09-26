@@ -34,6 +34,7 @@ import dev.janssenbatista.enfburnout.components.QuestionHintDialog
 import dev.janssenbatista.enfburnout.features.home.HomeScreen
 import dev.janssenbatista.enfburnout.features.other_diseases.OtherDiseasesScreen
 import dev.janssenbatista.enfburnout.features.splashscreen.SplashScreen
+import dev.janssenbatista.enfburnout.features.support_services.SupportServicesScreen
 import dev.janssenbatista.enfburnout.features.take_care.TakeCareScreen
 import dev.janssenbatista.enfburnout.features.talk.TalkScreen
 import dev.janssenbatista.enfburnout.features.whatis.WhatIsScreen
@@ -136,5 +137,6 @@ private fun getTopBarTitle(navigator: Navigator): String =
         WhatIsScreen::class.simpleName -> WhatIsScreen.TITLE
         OtherDiseasesScreen::class.simpleName -> OtherDiseasesScreen.TITLE
         TakeCareScreen::class.simpleName -> TakeCareScreen.TITLE
+        SupportServicesScreen::class.simpleName -> SupportServicesScreen.TITLE
         else -> ""
     }
