@@ -30,7 +30,10 @@ import dev.janssenbatista.enfburnout.R
 import dev.janssenbatista.enfburnout.features.home.HomeScreen
 
 @Composable
-fun DrawerContent(navigator: Navigator, onMenuClick: (Screen, String) -> Unit) {
+fun DrawerContent(
+    navigator: Navigator,
+    onMenuClick: (Screen) -> Unit
+) {
     Column(
         Modifier
             .padding(NavigationDrawerItemDefaults.ItemPadding)
@@ -62,7 +65,12 @@ fun DrawerContent(navigator: Navigator, onMenuClick: (Screen, String) -> Unit) {
         NavigationDrawerItem(
             label = { Text(text = "Início") },
             selected = navigator.lastItem::class.simpleName == HomeScreen::class.simpleName,
-            onClick = { onMenuClick(HomeScreen, HomeScreen.TITLE) },
-            icon = { Icon(imageVector = Icons.Default.Home, contentDescription = "Home") })
+            onClick = { onMenuClick(HomeScreen) },
+            icon = {
+                Icon(
+                    imageVector = Icons.Default.Home,
+                    contentDescription = HomeScreen.TITLE
+                )
+            })
     }
 }

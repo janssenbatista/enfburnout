@@ -14,7 +14,10 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.core.screen.Screen
+import cafe.adriel.voyager.navigator.LocalNavigator
+import cafe.adriel.voyager.navigator.currentOrThrow
 import dev.janssenbatista.enfburnout.R
+import dev.janssenbatista.enfburnout.features.talk.TalkScreen
 
 object HomeScreen : Screen {
     private fun readResolve(): Any = HomeScreen
@@ -22,6 +25,8 @@ object HomeScreen : Screen {
 
     @Composable
     override fun Content() {
+        val navigator = LocalNavigator.currentOrThrow
+
         Column(
             Modifier
                 .fillMaxSize()
@@ -31,7 +36,7 @@ object HomeScreen : Screen {
             Image(
                 painter = painterResource(id = R.drawable.burnout_pic),
                 contentDescription = null,
-                contentScale = ContentScale.FillWidth,
+                contentScale = ContentScale.Crop,
                 modifier = Modifier
                     .fillMaxWidth()
                     .weight(1f)
@@ -39,7 +44,12 @@ object HomeScreen : Screen {
             OutlinedButton(onClick = { /*TODO*/ }, modifier = Modifier.fillMaxWidth()) {
                 Text(text = "O que é?")
             }
-            OutlinedButton(onClick = { /*TODO*/ }, modifier = Modifier.fillMaxWidth()) {
+            OutlinedButton(
+                onClick = { navigator.push(TalkScreen) },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(bottom = 16.dp)
+            ) {
                 Text(text = "Vamos Conversar?")
             }
         }

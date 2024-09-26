@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.outlined.Help
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -29,8 +30,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import cafe.adriel.voyager.navigator.Navigator
 import dev.janssenbatista.enfburnout.components.DrawerContent
+import dev.janssenbatista.enfburnout.components.QuestionHintDialog
 import dev.janssenbatista.enfburnout.features.home.HomeScreen
 import dev.janssenbatista.enfburnout.features.splashscreen.SplashScreen
+import dev.janssenbatista.enfburnout.features.talk.TalkScreen
 import dev.janssenbatista.enfburnout.ui.theme.EnfBurnoutTheme
 import kotlinx.coroutines.launch
 
@@ -44,18 +47,19 @@ class MainActivity : ComponentActivity() {
 
                 val coroutineScope = rememberCoroutineScope()
                 val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
-                val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior()
-                var appBarTitle by remember {
-                    mutableStateOf(HomeScreen.TITLE)
+                val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior()
+                var isQuestionHintDialogVisible by remember {
+                    mutableStateOf(false)
                 }
 
                 Navigator(screen = SplashScreen) { navigator: Navigator ->
                     ModalNavigationDrawer(
                         drawerContent = {
                             ModalDrawerSheet {
-                                DrawerContent(navigator = navigator) { screen, title ->
+                                DrawerContent(
+                                    navigator = navigator,
+                                ) { screen ->
                                     navigator.replace(screen)
-                                    appBarTitle = title
                                     coroutineScope.launch {
                                         drawerState.close()
                                     }
@@ -68,7 +72,7 @@ class MainActivity : ComponentActivity() {
                             topBar = {
                                 if (navigator.lastItem::class.simpleName != SplashScreen::class.simpleName) {
                                     TopAppBar(
-                                        title = { Text(text = appBarTitle) },
+                                        title = { Text(text = getTopBarTitle(navigator)) },
                                         navigationIcon = {
                                             IconButton(onClick = {
                                                 coroutineScope.launch {
@@ -81,17 +85,38 @@ class MainActivity : ComponentActivity() {
                                                 )
                                             }
                                         },
-                                        scrollBehavior = scrollBehavior
+                                        scrollBehavior = scrollBehavior,
+                                        actions = {
+                                            if (navigator.lastItem::class.simpleName == TalkScreen::class.simpleName) {
+                                                IconButton(onClick = {
+                                                    isQuestionHintDialogVisible = true
+                                                }) {
+                                                    Icon(
+                                                        imageVector = Icons.AutoMirrored.Outlined.Help,
+                                                        contentDescription = "show help dialog"
+                                                    )
+                                                }
+                                            }
+                                        }
                                     )
                                 }
                             }) { paddingValues ->
                             Column(
                                 Modifier
                                     .padding(paddingValues)
-                                    .fillMaxSize()
                                     .nestedScroll(scrollBehavior.nestedScrollConnection)
+                                    .fillMaxSize()
                             ) {
                                 navigator.lastItem.Content()
+                                if (isQuestionHintDialogVisible) {
+                                    QuestionHintDialog(
+                                        onDismissRequestClick = {
+                                            isQuestionHintDialogVisible = false
+                                        },
+                                        onConfirmButtonClick = {
+                                            isQuestionHintDialogVisible = false
+                                        })
+                                }
                             }
                         }
                     }
@@ -100,3 +125,10 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+
+private fun getTopBarTitle(navigator: Navigator): String =
+    when (navigator.lastItem::class.simpleName) {
+        HomeScreen::class.simpleName -> HomeScreen.TITLE
+        TalkScreen::class.simpleName -> TalkScreen.TITLE
+        else -> ""
+    }
