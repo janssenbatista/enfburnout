@@ -34,6 +34,7 @@ import dev.janssenbatista.enfburnout.components.QuestionHintDialog
 import dev.janssenbatista.enfburnout.features.home.HomeScreen
 import dev.janssenbatista.enfburnout.features.splashscreen.SplashScreen
 import dev.janssenbatista.enfburnout.features.talk.TalkScreen
+import dev.janssenbatista.enfburnout.features.whatis.WhatIsScreen
 import dev.janssenbatista.enfburnout.ui.theme.EnfBurnoutTheme
 import kotlinx.coroutines.launch
 
@@ -130,5 +131,6 @@ private fun getTopBarTitle(navigator: Navigator): String =
     when (navigator.lastItem::class.simpleName) {
         HomeScreen::class.simpleName -> HomeScreen.TITLE
         TalkScreen::class.simpleName -> TalkScreen.TITLE
+        WhatIsScreen::class.simpleName -> WhatIsScreen.TITLE
         else -> ""
     }

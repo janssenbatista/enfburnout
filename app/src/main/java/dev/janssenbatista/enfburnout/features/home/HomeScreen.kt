@@ -18,6 +18,7 @@ import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import dev.janssenbatista.enfburnout.R
 import dev.janssenbatista.enfburnout.features.talk.TalkScreen
+import dev.janssenbatista.enfburnout.features.whatis.WhatIsScreen
 
 object HomeScreen : Screen {
     private fun readResolve(): Any = HomeScreen
@@ -41,7 +42,10 @@ object HomeScreen : Screen {
                     .fillMaxWidth()
                     .weight(1f)
             )
-            OutlinedButton(onClick = { /*TODO*/ }, modifier = Modifier.fillMaxWidth()) {
+            OutlinedButton(
+                onClick = { navigator.push(WhatIsScreen) },
+                modifier = Modifier.fillMaxWidth()
+            ) {
                 Text(text = "O que é?")
             }
             OutlinedButton(

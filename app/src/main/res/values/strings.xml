@@ -3,4 +3,8 @@
     <string name="app_logo">app logo</string>
     <string name="privacy_policy_text">Nós respeitamos sua privacidade e estamos comprometidos com a proteção dos seus dados. Este aplicativo coleta informações fornecidas de forma anônima através de um questionário sobre a síndrome de burnout. Os dados coletados têm como objetivo ajudar a entender melhor o estado emocional dos usuários, para fins de análise estatística. Nenhuma informação será utilizada para identificar você individualmente.</string>
     <string name="privacy_policy_title">Política de Privacidade</string>
+    <string name="burnout_content_1">Burnout é nada mais do que queimar-se ou consumir-se.</string>
+    <string name="burnout_content_2">O termo burnout surgiu em meados dos 70, através do psicanalista Freudenberger que notou o esgotamento dos profissionais da saúde. Mas, foi com a psicóloga Maslach que a síndrome de burnout ganhou notoriedade através de seus estudos sobre o fenômeno, elencando as três dimensões conhecidas hoje.</string>
+    <string name="burnout_content_3">Perpassando o contexto histórico, burnout ou esgotamento é todo aquele sentimento acumulado e conflituoso que se origina no ambiente de trabalho, por isso a necessidade de conhecer e reconhecer a importância a saúde mental no ambiente de trabalho.</string>
+    <string name="burnout_content_4">No Brasil, é conhecido como esgotamento profissional, teve o seu ápice com a pandemia de 2020, onde relatos e mais relatos de profissionais da saúde surgiram adoecidos pelo estresse, angustia e pressão que o ambiente da saúde representava. Até hoje, profissionais da saúde não sabem denominar o sentimento e a frustração que o esgotamento profissional permeia, por isso a importância da informação.</string>
 </resources>
