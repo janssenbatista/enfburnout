@@ -42,8 +42,7 @@ fun DrawerContent(
     Column(
         Modifier
             .padding(NavigationDrawerItemDefaults.ItemPadding)
-            .padding(top = 16.dp),
-        verticalArrangement = Arrangement.spacedBy(8.dp)
+            .padding(top = 16.dp)
     ) {
         Box(
             modifier = Modifier
@@ -66,7 +65,7 @@ fun DrawerContent(
             )
             Text(text = "Burnout", fontWeight = FontWeight.Medium, fontSize = 32.sp)
         }
-        HorizontalDivider(Modifier.padding(vertical = 8.dp))
+        HorizontalDivider(Modifier.padding(top = 16.dp, bottom = 8.dp))
         NavigationDrawerItem(
             label = { Text(text = HomeScreen.TITLE) },
             selected = navigator.lastItem::class.simpleName == HomeScreen::class.simpleName,
