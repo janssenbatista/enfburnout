@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.outlined.Help
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material3.DrawerValue
@@ -28,6 +29,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
+import androidx.compose.ui.res.stringResource
 import cafe.adriel.voyager.navigator.Navigator
 import dev.janssenbatista.enfburnout.components.DrawerContent
 import dev.janssenbatista.enfburnout.components.QuestionHintDialog
@@ -71,7 +73,8 @@ class MainActivity : ComponentActivity() {
                                 }
                             }
                         },
-                        drawerState = drawerState
+                        drawerState = drawerState,
+                        gesturesEnabled = drawerState.isOpen
                     ) {
                         Scaffold(
                             topBar = {
@@ -79,15 +82,26 @@ class MainActivity : ComponentActivity() {
                                     TopAppBar(
                                         title = { Text(text = getTopBarTitle(navigator)) },
                                         navigationIcon = {
-                                            IconButton(onClick = {
-                                                coroutineScope.launch {
-                                                    drawerState.open()
+                                            if (navigator.lastItem::class.simpleName == WhatIsScreen::class.simpleName ||
+                                                navigator.lastItem::class.simpleName == TalkScreen::class.simpleName
+                                            ) {
+                                                IconButton(onClick = { navigator.pop() }) {
+                                                    Icon(
+                                                        imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                                                        contentDescription = stringResource(R.string.go_back)
+                                                    )
                                                 }
-                                            }) {
-                                                Icon(
-                                                    imageVector = Icons.Default.Menu,
-                                                    contentDescription = "Menu"
-                                                )
+                                            } else {
+                                                IconButton(onClick = {
+                                                    coroutineScope.launch {
+                                                        drawerState.open()
+                                                    }
+                                                }) {
+                                                    Icon(
+                                                        imageVector = Icons.Default.Menu,
+                                                        contentDescription = stringResource(R.string.menu)
+                                                    )
+                                                }
                                             }
                                         },
                                         scrollBehavior = scrollBehavior,

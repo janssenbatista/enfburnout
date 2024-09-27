@@ -32,4 +32,6 @@
     <string name="therapeutic_content">A psicoterapia é uma das aliadas no tratamento terapêutico, é preciso a compreensão que antes das dificuldades e problemáticas que ambiente de trabalho pode apresentar, a priorização de sentimentos e de bem-estar é do colaborador, ou seja, o trabalhador.</string>
     <string name="follow_up">Acompanhamento</string>
     <string name="follow_up_content">O acompanhamento de toda doença com relação neuropsicológica ou mental é através do médico psiquiatra, psicólogo, enfermeiro especialista em saúde mental e toda a equipe multiprofissional, pois lidar com uma pessoa portadora de doença mental requer cuidado, dedicação e paciência para aconselhar e acolher o paciente.</string>
+    <string name="go_back">voltar</string>
+    <string name="menu">Menu</string>
 </resources>
