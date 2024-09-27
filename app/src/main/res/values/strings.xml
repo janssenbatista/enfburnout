@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">EnfBurnout</string>
     <string name="app_logo">app logo</string>
-    <string name="privacy_policy_text">Nós respeitamos sua privacidade e estamos comprometidos com a proteção dos seus dados. Este aplicativo coleta informações fornecidas de forma anônima através de um questionário sobre a síndrome de burnout. Os dados coletados têm como objetivo ajudar a entender melhor o estado emocional dos usuários, para fins de análise estatística. Nenhuma informação será utilizada para identificar você individualmente.</string>
+    <string name="privacy_policy_text">Nós respeitamos sua privacidade e estamos comprometidos com a proteção dos seus dados. Este aplicativo coleta informações fornecidas de forma anônima através desse questionário. Os dados coletados têm como objetivo ajudar a entender melhor o estado emocional dos usuários, para fins de análise estatística. Nenhuma informação será utilizada para identificar você individualmente.</string>
     <string name="privacy_policy_title">Política de Privacidade</string>
     <string name="burnout_content_1">Burnout é nada mais do que queimar-se ou consumir-se.</string>
     <string name="burnout_content_2">O termo burnout surgiu em meados dos 70, através do psicanalista Freudenberger que notou o esgotamento dos profissionais da saúde. Mas, foi com a psicóloga Maslach que a síndrome de burnout ganhou notoriedade através de seus estudos sobre o fenômeno, elencando as três dimensões conhecidas hoje.</string>
