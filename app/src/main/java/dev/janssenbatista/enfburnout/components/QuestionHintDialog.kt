@@ -3,8 +3,8 @@ package dev.janssenbatista.enfburnout.components
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.Button
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -25,7 +25,7 @@ fun QuestionHintDialog(onDismissRequestClick: () -> Unit, onConfirmButtonClick: 
         "Sempre"
     )
     AlertDialog(onDismissRequest = onDismissRequestClick, confirmButton = {
-        TextButton(onClick = onConfirmButtonClick) {
+        Button(onClick = onConfirmButtonClick) {
             Text(text = "OK")
         }
     }, text = {
@@ -34,7 +34,7 @@ fun QuestionHintDialog(onDismissRequestClick: () -> Unit, onConfirmButtonClick: 
                 text = "Leia com atenção e marque a alternativa mais condizente com o sentimento mais frequente:",
                 fontSize = 18.sp,
                 fontWeight = FontWeight.Medium,
-                modifier = Modifier.padding(bottom = 8.dp)
+                modifier = Modifier.padding(bottom = 16.dp)
             )
             answers.forEachIndexed { index, item ->
                 Text(
