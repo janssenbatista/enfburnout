@@ -26,4 +26,10 @@
     <string name="support_content_2">Centro de Valorização da Vida (QVV) – 188</string>
     <string name="support_content_3">Ministério da Previdência Social (INSS) – 135</string>
     <string name="support_content_4">Delegacias Regionais do Trabalho – 158</string>
+    <string name="medicinal">Medicamentoso</string>
+    <string name="medicinal_content">A síndrome de burnout quando diagnosticada pode ser tratada com o acompanhamento medicamentoso (antidepressivos ou ansiolíticos), sendo prescrita por um psiquiatra alguns tratamentos são de longo prazo e outros podem ser realizados dependendo da interação que o paciente apresenta, variando de um indivíduo para outro.</string>
+    <string name="therapeutic">Terapêutico</string>
+    <string name="therapeutic_content">A psicoterapia é uma das aliadas no tratamento terapêutico, é preciso a compreensão que antes das dificuldades e problemáticas que ambiente de trabalho pode apresentar, a priorização de sentimentos e de bem-estar é do colaborador, ou seja, o trabalhador.</string>
+    <string name="follow_up">Acompanhamento</string>
+    <string name="follow_up_content">O acompanhamento de toda doença com relação neuropsicológica ou mental é através do médico psiquiatra, psicólogo, enfermeiro especialista em saúde mental e toda a equipe multiprofissional, pois lidar com uma pessoa portadora de doença mental requer cuidado, dedicação e paciência para aconselhar e acolher o paciente.</string>
 </resources>

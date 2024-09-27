@@ -32,6 +32,7 @@ import dev.janssenbatista.enfburnout.features.home.HomeScreen
 import dev.janssenbatista.enfburnout.features.other_diseases.OtherDiseasesScreen
 import dev.janssenbatista.enfburnout.features.support_services.SupportServicesScreen
 import dev.janssenbatista.enfburnout.features.take_care.TakeCareScreen
+import dev.janssenbatista.enfburnout.features.treatment.TreatmentScreen
 
 @Composable
 fun DrawerContent(
@@ -73,6 +74,16 @@ fun DrawerContent(
             icon = {
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.Article,
+                    contentDescription = HomeScreen.TITLE
+                )
+            })
+        NavigationDrawerItem(
+            label = { Text(text = TreatmentScreen.TITLE) },
+            selected = navigator.lastItem::class.simpleName == TreatmentScreen::class.simpleName,
+            onClick = { onMenuClick(TreatmentScreen) },
+            icon = {
+                Icon(
+                    painter = painterResource(id = R.drawable.ic_medical_services_filled),
                     contentDescription = HomeScreen.TITLE
                 )
             })
