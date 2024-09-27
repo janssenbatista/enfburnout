@@ -29,7 +29,8 @@ object WhatIsScreen : Screen {
     override fun Content() {
         Column(
             Modifier
-                .padding(16.dp)
+                .padding(horizontal = 16.dp)
+                .padding(bottom = 32.dp)
                 .verticalScroll(rememberScrollState()),
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
