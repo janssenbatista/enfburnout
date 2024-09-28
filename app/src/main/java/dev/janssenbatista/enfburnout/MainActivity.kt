@@ -30,9 +30,11 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.navigator.Navigator
 import dev.janssenbatista.enfburnout.components.DrawerContent
 import dev.janssenbatista.enfburnout.components.QuestionHintDialog
+import dev.janssenbatista.enfburnout.features.about_app.AboutAppScreen
 import dev.janssenbatista.enfburnout.features.home.HomeScreen
 import dev.janssenbatista.enfburnout.features.other_diseases.OtherDiseasesScreen
 import dev.janssenbatista.enfburnout.features.splashscreen.SplashScreen
@@ -62,7 +64,7 @@ class MainActivity : ComponentActivity() {
                 Navigator(screen = SplashScreen) { navigator: Navigator ->
                     ModalNavigationDrawer(
                         drawerContent = {
-                            ModalDrawerSheet {
+                            ModalDrawerSheet(Modifier.padding(horizontal = 0.dp)) {
                                 DrawerContent(
                                     navigator = navigator,
                                 ) { screen ->
@@ -154,5 +156,6 @@ private fun getTopBarTitle(navigator: Navigator): String =
         OtherDiseasesScreen::class.simpleName -> OtherDiseasesScreen.TITLE
         TakeCareScreen::class.simpleName -> TakeCareScreen.TITLE
         SupportServicesScreen::class.simpleName -> SupportServicesScreen.TITLE
+        AboutAppScreen::class.simpleName -> AboutAppScreen.TITLE
         else -> ""
     }

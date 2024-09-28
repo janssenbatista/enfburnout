@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Article
 import androidx.compose.material.icons.filled.ContactPhone
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -28,6 +29,7 @@ import androidx.compose.ui.unit.sp
 import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.Navigator
 import dev.janssenbatista.enfburnout.R
+import dev.janssenbatista.enfburnout.features.about_app.AboutAppScreen
 import dev.janssenbatista.enfburnout.features.home.HomeScreen
 import dev.janssenbatista.enfburnout.features.other_diseases.OtherDiseasesScreen
 import dev.janssenbatista.enfburnout.features.support_services.SupportServicesScreen
@@ -114,6 +116,20 @@ fun DrawerContent(
                 Icon(
                     imageVector = Icons.Filled.ContactPhone,
                     contentDescription = SupportServicesScreen.TITLE
+                )
+            })
+        Box(modifier = Modifier
+            .fillMaxWidth()
+            .weight(1f))
+        HorizontalDivider()
+        NavigationDrawerItem(
+            label = { Text(text = "Sobre o Aplicativo") },
+            selected = navigator.lastItem::class.simpleName == AboutAppScreen::class.simpleName,
+            onClick = { onMenuClick(AboutAppScreen) },
+            icon = {
+                Icon(
+                    imageVector = Icons.Filled.Info,
+                    contentDescription = AboutAppScreen.TITLE
                 )
             })
     }
