@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.Card
@@ -34,7 +35,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import cafe.adriel.voyager.core.screen.Screen
+import cafe.adriel.voyager.navigator.LocalNavigator
+import cafe.adriel.voyager.navigator.currentOrThrow
 import dev.janssenbatista.enfburnout.R
+import dev.janssenbatista.enfburnout.components.Subtitle
+import dev.janssenbatista.enfburnout.features.references.ReferencesScreen
 
 object AboutAppScreen : Screen {
     private fun readResolve(): Any = AboutAppScreen
@@ -46,44 +51,80 @@ object AboutAppScreen : Screen {
         val context = LocalContext.current
         val authorEmail = "olivia.almeida@urca.br"
         val developerEmail = "batistajanssen.dev@gmail.com"
+        val navigator = LocalNavigator.currentOrThrow
 
         Column(
             Modifier
                 .padding(horizontal = 16.dp)
                 .fillMaxWidth()
                 .verticalScroll(rememberScrollState()),
-            verticalArrangement = Arrangement.spacedBy(16.dp)
+            verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            Column(
+            Card(
                 Modifier
                     .fillMaxWidth()
-                    .padding(top = 16.dp),
-                horizontalAlignment = Alignment.CenterHorizontally,
-                verticalArrangement = Arrangement.Center
+                    .padding(vertical = 8.dp),
+                colors = CardDefaults.cardColors(containerColor = Color.White),
+                elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
             ) {
-                Image(
-                    painter = painterResource(id = R.drawable.logo),
-                    contentDescription = stringResource(
-                        R.string.app_logo
+                Column(
+                    Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 16.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                    verticalArrangement = Arrangement.Center
+                ) {
+                    Image(
+                        painter = painterResource(id = R.drawable.logo),
+                        contentDescription = stringResource(
+                            R.string.app_logo
+                        )
                     )
-                )
-                Spacer(modifier = Modifier.height(8.dp))
-                Row {
-                    Text(
-                        text = "Enf",
-                        fontSize = 40.sp,
-                        fontWeight = FontWeight.Medium,
-                        color = MaterialTheme.colorScheme.tertiary
-                    )
-                    Text(text = "Burnout", fontWeight = FontWeight.Medium, fontSize = 40.sp)
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Row {
+                        Text(
+                            text = "Enf",
+                            fontSize = 40.sp,
+                            fontWeight = FontWeight.Medium,
+                            color = MaterialTheme.colorScheme.tertiary
+                        )
+                        Text(text = "Burnout", fontWeight = FontWeight.Medium, fontSize = 40.sp)
+                    }
+                    Text(text = "Versão 1.0.0", fontWeight = FontWeight.Medium)
                 }
-                Text(text = "Versão 1.0.0", fontWeight = FontWeight.Medium)
             }
             Text(text = stringResource(R.string.about_app_content))
             Card(
+                Modifier
+                    .fillMaxWidth()
+                    .padding(vertical = 8.dp)
+                    .clickable {
+                        navigator.push(ReferencesScreen)
+                    },
+                colors = CardDefaults.cardColors(containerColor = Color.White),
+                elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
+            ) {
+                Row(
+                    Modifier
+                        .fillMaxWidth()
+                        .padding(16.dp), horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    Text(text = "Referências")
+                    Icon(
+                        imageVector = Icons.AutoMirrored.Filled.ArrowForward,
+                        contentDescription = "ir para a tela de referências"
+                    )
+                }
+            }
+            Text(
+                text = stringResource(R.string.contacts),
+                style = MaterialTheme.typography.headlineSmall,
+                fontWeight = FontWeight.Medium
+            )
+            Card(
                 Modifier.fillMaxWidth(),
                 colors = CardDefaults.cardColors(containerColor = Color.White),
-                elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+                elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
             ) {
                 Column(Modifier.fillMaxWidth(), verticalArrangement = Arrangement.Center) {
                     Row(
@@ -121,7 +162,7 @@ object AboutAppScreen : Screen {
                     .fillMaxWidth()
                     .padding(bottom = 32.dp),
                 colors = CardDefaults.cardColors(containerColor = Color.White),
-                elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+                elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
             ) {
                 Column(Modifier.fillMaxWidth(), verticalArrangement = Arrangement.Center) {
                     Row(

@@ -37,6 +37,7 @@ import dev.janssenbatista.enfburnout.components.QuestionHintDialog
 import dev.janssenbatista.enfburnout.features.about_app.AboutAppScreen
 import dev.janssenbatista.enfburnout.features.home.HomeScreen
 import dev.janssenbatista.enfburnout.features.other_diseases.OtherDiseasesScreen
+import dev.janssenbatista.enfburnout.features.references.ReferencesScreen
 import dev.janssenbatista.enfburnout.features.splashscreen.SplashScreen
 import dev.janssenbatista.enfburnout.features.support_services.SupportServicesScreen
 import dev.janssenbatista.enfburnout.features.take_care.TakeCareScreen
@@ -85,7 +86,8 @@ class MainActivity : ComponentActivity() {
                                         title = { Text(text = getTopBarTitle(navigator)) },
                                         navigationIcon = {
                                             if (navigator.lastItem::class.simpleName == WhatIsScreen::class.simpleName ||
-                                                navigator.lastItem::class.simpleName == TalkScreen::class.simpleName
+                                                navigator.lastItem::class.simpleName == TalkScreen::class.simpleName ||
+                                                navigator.lastItem::class.simpleName == ReferencesScreen::class.simpleName
                                             ) {
                                                 IconButton(onClick = { navigator.pop() }) {
                                                     Icon(
@@ -157,5 +159,6 @@ private fun getTopBarTitle(navigator: Navigator): String =
         TakeCareScreen::class.simpleName -> TakeCareScreen.TITLE
         SupportServicesScreen::class.simpleName -> SupportServicesScreen.TITLE
         AboutAppScreen::class.simpleName -> AboutAppScreen.TITLE
+        ReferencesScreen::class.simpleName -> ReferencesScreen.TITLE
         else -> ""
     }
