@@ -15,7 +15,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.Card
@@ -31,6 +30,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -38,8 +38,6 @@ import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.LocalNavigator
 import cafe.adriel.voyager.navigator.currentOrThrow
 import dev.janssenbatista.enfburnout.R
-import dev.janssenbatista.enfburnout.components.Subtitle
-import dev.janssenbatista.enfburnout.features.references.ReferencesScreen
 
 object AboutAppScreen : Screen {
     private fun readResolve(): Any = AboutAppScreen
@@ -51,7 +49,6 @@ object AboutAppScreen : Screen {
         val context = LocalContext.current
         val authorEmail = "olivia.almeida@urca.br"
         val developerEmail = "batistajanssen.dev@gmail.com"
-        val navigator = LocalNavigator.currentOrThrow
 
         Column(
             Modifier
@@ -93,33 +90,12 @@ object AboutAppScreen : Screen {
                     Text(text = "Versão 1.0.0", fontWeight = FontWeight.Medium)
                 }
             }
-            Text(text = stringResource(R.string.about_app_content))
-            Card(
-                Modifier
-                    .fillMaxWidth()
-                    .padding(vertical = 8.dp)
-                    .clickable {
-                        navigator.push(ReferencesScreen)
-                    },
-                colors = CardDefaults.cardColors(containerColor = Color.White),
-                elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
-            ) {
-                Row(
-                    Modifier
-                        .fillMaxWidth()
-                        .padding(16.dp), horizontalArrangement = Arrangement.SpaceBetween
-                ) {
-                    Text(text = "Referências")
-                    Icon(
-                        imageVector = Icons.AutoMirrored.Filled.ArrowForward,
-                        contentDescription = "ir para a tela de referências"
-                    )
-                }
-            }
+            Text(text = stringResource(R.string.about_app_content), textAlign = TextAlign.Justify)
             Text(
                 text = stringResource(R.string.contacts),
                 style = MaterialTheme.typography.headlineSmall,
-                fontWeight = FontWeight.Medium
+                fontWeight = FontWeight.Medium,
+                modifier = Modifier.padding(top = 16.dp)
             )
             Card(
                 Modifier.fillMaxWidth(),

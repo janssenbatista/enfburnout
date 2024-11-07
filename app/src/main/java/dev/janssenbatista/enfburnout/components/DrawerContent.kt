@@ -124,7 +124,7 @@ fun DrawerContent(
         HorizontalDivider()
         NavigationDrawerItem(
             label = { Text(text = "Sobre o Aplicativo") },
-            selected = navigator.lastItem::class.simpleName == AboutAppScreen::class.simpleName,
+            selected = false,
             onClick = { onMenuClick(AboutAppScreen) },
             icon = {
                 Icon(
