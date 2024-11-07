@@ -1,6 +1,5 @@
 package dev.janssenbatista.enfburnout.features.talk
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dev.janssenbatista.enfburnout.BuildConfig
@@ -36,17 +35,10 @@ class TalkViewModel(private val apiService: ApiService) : ViewModel() {
                         }
                     }
                     viewModelScope.launch {
-                        try {
-                            val response = apiService.sendAnswers(
-                                apiKey = BuildConfig.API_KEY,
-                                ApiRequest(answers = _talkState.value.answers.toIntArray())
-                            )
-                            if (!response.isSuccessful) {
-                                return@launch
-                            }
-                        } catch (e: Exception) {
-                            return@launch
-                        }
+                        apiService.sendAnswers(
+                            apiKey = BuildConfig.API_KEY,
+                            ApiRequest(answers = _talkState.value.answers.toIntArray())
+                        )
                     }
                     val result =
                         _talkState.value.answers.reduce { acc, next -> acc + next }
