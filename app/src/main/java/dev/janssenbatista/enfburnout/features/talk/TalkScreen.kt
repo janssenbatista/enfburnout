@@ -1,5 +1,6 @@
 package dev.janssenbatista.enfburnout.features.talk
 
+import android.util.Log
 import android.widget.Toast
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -9,6 +10,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -23,6 +25,7 @@ import cafe.adriel.voyager.navigator.currentOrThrow
 import dev.janssenbatista.enfburnout.components.PrivacyPolicyDialog
 import dev.janssenbatista.enfburnout.components.Question
 import dev.janssenbatista.enfburnout.components.QuestionHintDialog
+import dev.janssenbatista.enfburnout.components.ResultDialog
 import dev.janssenbatista.enfburnout.features.home.HomeScreen
 import org.koin.androidx.compose.koinViewModel
 
@@ -74,7 +77,7 @@ object TalkScreen : Screen {
                     .padding(horizontal = 16.dp)
                     .padding(bottom = 8.dp)
             ) {
-                Text(text = "Submeter Formulário")
+                Text(text = "Ver Resultado")
             }
 
         }
@@ -85,6 +88,13 @@ object TalkScreen : Screen {
         }
         if (state.errorMessage.isNotBlank()) {
             Toast.makeText(content, state.errorMessage, Toast.LENGTH_SHORT).show()
+        }
+        if (state.points != 0) {
+            Log.d("POINTS", state.points.toString())
+            ResultDialog(points = state.points, onClose = {
+                state.setPoints(0)
+                navigator.pop()
+            })
         }
     }
 }

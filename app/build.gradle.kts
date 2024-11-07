@@ -1,11 +1,18 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
 }
 
+val localProperties = Properties()
+localProperties.load(FileInputStream(rootProject.file("local.properties")))
+
 android {
     namespace = "dev.janssenbatista.enfburnout"
     compileSdk = 34
+    android.buildFeatures.buildConfig = true
 
     defaultConfig {
         applicationId = "dev.janssenbatista.enfburnout"
@@ -21,7 +28,13 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField(type = "String", name = "BASE_URL", value = "\"${localProperties["BASE_URL"]}\"")
+            buildConfigField(type = "String", name = "API_KEY", value = "\"${localProperties["API_KEY"]}\"")
+        }
         release {
+            buildConfigField(type = "String", name = "BASE_URL", value = "\"${localProperties["BASE_URL"]}\"")
+            buildConfigField(type = "String", name = "API_KEY", value = "\"${localProperties["API_KEY"]}\"")
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -67,6 +80,9 @@ dependencies {
     // Koin
     implementation(libs.koin.android)
     implementation(libs.koin.androidx.compose)
+    // Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
