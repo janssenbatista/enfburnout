@@ -90,7 +90,6 @@ object TalkScreen : Screen {
             Toast.makeText(content, state.errorMessage, Toast.LENGTH_SHORT).show()
         }
         if (state.points != 0) {
-            Log.d("POINTS", state.points.toString())
             ResultDialog(points = state.points, onClose = {
                 state.setPoints(0)
                 navigator.pop()

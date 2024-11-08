@@ -12,5 +12,5 @@ interface ApiService {
     suspend fun sendAnswers(
         @Header("apiKey") apiKey: String,
         @Body answers: ApiRequest
-    ): Response<IntArray>
+    ): Response<Any>
 }
