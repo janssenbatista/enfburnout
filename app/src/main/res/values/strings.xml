@@ -36,4 +36,7 @@
     <string name="menu">Menu</string>
     <string name="about_app_content">Este aplicativo é direcionado para os profissionais da área da saúde, professores e acadêmicos da saúde. A finalidade desse aplicativo é a informação quanto ao esgotamento profissional. Cujo a incidência de casos tem se mostrado mais alarmante nas últimas décadas. Além disso, a disseminação do conteúdo e da abrangência que Sindrome de Burnout apresenta.</string>
     <string name="contacts">Contatos</string>
+    <string name="burnout_content_subtitle">O que é o esgotamento profissional?</string>
+    <string name="burnout_content_00">Esgotamento profissional ou síndrome de burnout é uma doença que está relacionada ao ambiente de trabalho, classificada como transtorno mental, compromete três dimensões: a exaustão emocional (sentimento de incompetência, cansaço extremo, irritação, estresse ansiedade ), a despersonalização (conflituo da personalidade no ambiente de trabalho, agressividade, insensibilidade emocional para com situações delicadas), e redução de realização profissional (desvalorização profissional, baixa remuneração, incompetência profissional).</string>
+    <string name="burnout_content_01">Afeta principalmente os profissionais que estão ligados as relações públicas como profissionais da saúde, professores.</string>
 </resources>

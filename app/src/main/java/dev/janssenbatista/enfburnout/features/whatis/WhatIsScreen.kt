@@ -42,6 +42,9 @@ object WhatIsScreen : Screen {
                     .fillMaxWidth(),
                 contentScale = ContentScale.Crop
             )
+            Subtitle(text = stringResource(R.string.burnout_content_subtitle))
+            Text(text = stringResource(R.string.burnout_content_00))
+            Text(text = stringResource(R.string.burnout_content_01))
             Text(text = stringResource(R.string.burnout_content_1))
             Text(text = stringResource(R.string.burnout_content_2))
             Text(text = stringResource(R.string.burnout_content_3))
