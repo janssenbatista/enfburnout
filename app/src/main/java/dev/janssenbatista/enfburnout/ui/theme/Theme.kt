@@ -44,7 +44,6 @@ private val lightScheme = lightColorScheme(
 
 @Composable
 fun EnfBurnoutTheme(
-    dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {
     val colorScheme = lightScheme
