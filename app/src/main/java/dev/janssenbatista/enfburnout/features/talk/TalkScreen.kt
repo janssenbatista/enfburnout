@@ -35,16 +35,17 @@ object TalkScreen : Screen {
     const val TITLE = "Vamos Conversar?"
 
     private val questions = listOf(
-        "1 - Com que frequência você se sente triste no ambiente de trabalho?",
-        "2 - Com que frequência você sente que o seu trabalho te estressa?",
-        "3 - Com que frequência você sente que o ambiente de trabalho te esgota emocionalmente e fisicamente?",
-        "4 - Com que frequência você sente que lidar com colegas de trabalho ou o público alvo te deixa exausto?",
-        "5 - Você sente que seu trabalho te faz feliz?",
-        "6 - Você sente que teu trabalho faz a diferença para o outro?",
-        "7 - Você se sente valorizado no ambiente de trabalho?",
-        "8 - Você acha que está recebendo o valor salarial adequado para a sua função no trabalho?",
-        "9 - Você acha que o seu trabalho afeta as suas relações pessoais e interpessoais?",
-        "10 - Você acredita que o habito de fazer exercícios físicos ajuda a enfrentar o estresse no ambiente de trabalho?"
+        "Com que frequência o seu trabalho lhe deixa triste?",
+        "Com que frequência você sente que o seu trabalho te estressa?",
+        "Com que frequência você sente que o ambiente de trabalho te esgota emocionalmente e fisicamente?",
+        "Com que frequência você sente que lidar com colegas de trabalho ou o público alvo te deixa exausto?",
+        "Você sente que seu trabalho te faz feliz?",
+        "Você sente que teu trabalho faz a diferença para o outro?",
+        "Você se sente valorizado no ambiente de trabalho?",
+        "Você acha que recebe o valor salarial adequado para a sua função no trabalho?",
+        "Você acha que o seu trabalho prejudica as suas relações pessoais e interpessoais?",
+        "Você já sentiu que o seu trabalho prejudica a sua empatia?",
+        "Você já se sentiu como se estivesse desconectado do seu corpo durante o trabalho?"
     )
 
     @Composable
@@ -64,7 +65,7 @@ object TalkScreen : Screen {
         ) {
             questions.forEachIndexed { index, question ->
                 Question(
-                    title = question,
+                    title = "${index + 1} - $question",
                     showDivider = index != questions.size - 1
                 ) { selectedItem ->
                     state.setAnswer(index, selectedItem)
