@@ -31,7 +31,7 @@ object WhatIsScreen : Screen {
         Column(
             Modifier
                 .padding(horizontal = 16.dp)
-                .padding(bottom = 32.dp)
+                .padding(bottom = 32.dp, top = 16.dp)
                 .verticalScroll(rememberScrollState()),
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
