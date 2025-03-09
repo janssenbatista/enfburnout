@@ -28,9 +28,9 @@
     <string name="support_content_3">Ministério da Previdência Social (INSS) – 135</string>
     <string name="support_content_4">Delegacias Regionais do Trabalho – 158</string>
     <string name="medicinal">Medicamentoso</string>
-    <string name="medicinal_content">A síndrome de burnout quando diagnosticada pode ser tratada com o acompanhamento medicamentoso (antidepressivos ou ansiolíticos), sendo prescrita por um psiquiatra alguns tratamentos são de longo prazo e outros podem ser realizados dependendo da interação que o paciente apresenta, variando de um indivíduo para outro.</string>
+    <string name="medicinal_content">O tratamento medicamentoso as vezes é a primeira opção de cuidado para o paciente em estado de esgotamento profissional, varia de grau e necessidade para o paciente, usualmente são usados ansiolíticos e antidepressivos para o quadro. É importante ressaltar que a prescrição de medicamentos deve acontecer por profissionais médicos e especialistas na sintomatologia.</string>
     <string name="therapeutic">Terapêutico</string>
-    <string name="therapeutic_content">A psicoterapia é uma das aliadas no tratamento terapêutico, é preciso a compreensão que antes das dificuldades e problemáticas que ambiente de trabalho pode apresentar, a priorização de sentimentos e de bem-estar é do colaborador, ou seja, o trabalhador.</string>
+    <string name="therapeutic_content">A terapia é outra medida utilizada como suporte para o tratamento do esgotamento profissional, tornando um amparo para o paciente em reconhecer os seus sentimentos e as fragilidades que o ambiente de trabalho cria no profissional, identificar potencias gatilhos geradores da síndrome, assim como também ansiedade e sobrecarga emocional. Faz parte do processo de se conhecer para saber os seus limites e impor limites para si mesmo.</string>
     <string name="follow_up">Acompanhamento</string>
     <string name="follow_up_content">O acompanhamento de toda doença com relação neuropsicológica ou mental é através do médico psiquiatra, psicólogo, enfermeiro especialista em saúde mental e toda a equipe multiprofissional, pois lidar com uma pessoa portadora de doença mental requer cuidado, dedicação e paciência para aconselhar e acolher o paciente.</string>
     <string name="go_back">voltar</string>
