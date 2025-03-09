@@ -1,6 +1,7 @@
 package dev.janssenbatista.enfburnout.features.other_diseases
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -28,41 +29,23 @@ object OtherDiseasesScreen : Screen {
         Column(
             Modifier
                 .verticalScroll(rememberScrollState())
-                .padding(16.dp)
+                .padding(16.dp),
+            verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             Text(text = stringResource(R.string.other_content))
-            Subtitle(text = stringResource(R.string.depression))
             Image(
-                painter = painterResource(id = R.drawable.depression),
-                contentDescription = null,
-                contentScale = ContentScale.Crop,
+                painter = painterResource(id = R.drawable.esgotamento_profissional),
+                contentDescription = "imagem sobre outras doenças",
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .height(200.dp)
-                    .padding(bottom = 8.dp)
+                    .height(400.dp)
+                    .fillMaxWidth(),
+                contentScale = ContentScale.Crop
             )
+            Subtitle(text = stringResource(R.string.depression))
             Text(text = stringResource(R.string.depression_content))
             Subtitle(text = stringResource(R.string.stress))
-            Image(
-                painter = painterResource(id = R.drawable.stress),
-                contentDescription = null,
-                contentScale = ContentScale.Crop,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(200.dp)
-                    .padding(bottom = 8.dp)
-            )
             Text(text = stringResource(R.string.stress_content))
             Subtitle(text = stringResource(R.string.anxiety))
-            Image(
-                painter = painterResource(id = R.drawable.anxiety),
-                contentDescription = null,
-                contentScale = ContentScale.Crop,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(200.dp)
-                    .padding(bottom = 8.dp)
-            )
             Text(text = stringResource(R.string.anxiety_content))
         }
     }
