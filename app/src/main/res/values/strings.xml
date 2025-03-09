@@ -23,7 +23,7 @@
     <string name="take_care_content_2">Estudos comprovam que uma caminhada de 30 minutos ajuda na mobilidade e melhora muscular.</string>
     <string name="take_care_content_3">A ingesta de água é outro ponto positivo para o condicionamento do corpo, assim como uma alimentação balanceada de acordo com a sua condição. Frutas e verduras são sempre uma boa pedida, mas também o docinho para fazer você feliz, com moderação.</string>
     <string name="take_care_content_4">Outra forma de cuidar de si é compreender que a saúde mental é um pilar importante para a qualidade de vida, seguir com o cuidado com mente e a percepção de sentimento conflituosos melhora a qualidade de vida, claro, sempre com o auxílio do profissional de psicologia.</string>
-    <string name="support_content_1">No ano de 2021, a Organização Mundial da Saúde (OMS) classificou a síndrome de burnout / esgotamento profissional como uma doença ocupacional, dentro da Classificação Internacional de Doenças (CID-11) com o código (QD85) e no CID-10 o código (Z73.0). Portanto, para a legislação brasileira o afastamento das atividades empregatícias com o diagnóstico de síndrome de burnout é legal e consta como incapacidade de trabalho, através da Comunicação de Acidente de Trabalho (CAT) para registro de adoecimento vinculado ao trabalho. Posteriormente, o encaminhamento para análise do INSS.</string>
+    <string name="support_content_1">No ano de 2021, a Organização Mundial da Saúde (OMS) classificou a síndrome de burnout / esgotamento profissional como uma doença ocupacional, dentro da Classificação Internacional de Doenças (CID-11) com o código (QD85) e no CID-10 o código (Z73.0).</string>
     <string name="support_content_2">Centro de Valorização da Vida (QVV) – 188</string>
     <string name="support_content_3">Ministério da Previdência Social (INSS) – 135</string>
     <string name="support_content_4">Delegacias Regionais do Trabalho – 158</string>
@@ -47,4 +47,10 @@
         - Dores musculares, problemas de coluna, pernas, ombro, taquicardia, cefaleia e mãos são as queixas mais recorrentes dos trabalhadores.\n
         - Falta de progressão de carreira e desmoralização do profissional por parte da gerência e pacientes.
     </string>
+    <string name="support_content_1_1">No ano de 2021, a Organização Mundial da Saúde (OMS) classificou a síndrome de burnout / esgotamento profissional como uma doença ocupacional, dentro da Classificação Internacional de Doenças (CID-11) com o código (QD85) e no CID-10 o código (Z73.0).</string>
+    <string name="support_content_1_2">Para a legislação brasileira o afastamento das atividades empregatícias com o diagnóstico de esgotamento profissional / síndrome de burnout é legal e consta como incapacidade de trabalho, através do apurado de exames e consultas que comprovem a síndrome.</string>
+    <string name="support_content_1_3">O Instituto Nacional do Seguro Social (INSS) é o órgão responsável por conceder o auxilio doença, para poder da entrada no beneficio o INSS exige uma serie de documentos para sem analisados, tais documentos são: exames, atestados e laudos médicos comprovados para a síndrome, agendar a perícia, preencher requerimento no site “Meu INSS” ou pelo número 135.</string>
+    <string name="support_content_1_4">Existe também a aposentadoria por invalidez, ocorre quando o trabalhador não pode de forma alguma exercer sua função, os documentos requeridos para dar entrada no processo são os laudos médicos que conste permanentemente a incapacidade de permanecer no trabalho.</string>
+    <string name="support_content_1_5">Essas são maneiras de resguardar o trabalhador e oferecer seguridade para tratamento e recurso financeiro para se manter dentro das necessidades cotidianas.</string>
+    <string name="support_content_1_6">Comunicação de Acidente de Trabalho (CAT) para registro de adoecimento vinculado ao trabalho. Posteriormente, o encaminhamento para análise do INSS.</string>
 </resources>
