@@ -99,16 +99,6 @@ fun DrawerContent(
                 )
             })
         NavigationDrawerItem(
-            label = { Text(text = TakeCareScreen.TITLE) },
-            selected = navigator.lastItem::class.simpleName == TakeCareScreen::class.simpleName,
-            onClick = { onMenuClick(TakeCareScreen) },
-            icon = {
-                Icon(
-                    imageVector = Icons.AutoMirrored.Filled.Article,
-                    contentDescription = TakeCareScreen.TITLE
-                )
-            })
-        NavigationDrawerItem(
             label = { Text(text = SupportServicesScreen.TITLE) },
             selected = navigator.lastItem::class.simpleName == SupportServicesScreen::class.simpleName,
             onClick = { onMenuClick(SupportServicesScreen) },
