@@ -65,7 +65,7 @@ fun DrawerContent(
                 fontWeight = FontWeight.Medium,
                 color = MaterialTheme.colorScheme.tertiary
             )
-            Text(text = "Burnout", fontWeight = FontWeight.Medium, fontSize = 32.sp)
+            Text(text = "Burn", fontWeight = FontWeight.Medium, fontSize = 32.sp)
         }
         HorizontalDivider(Modifier.padding(top = 16.dp, bottom = 8.dp))
         NavigationDrawerItem(

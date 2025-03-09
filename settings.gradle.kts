@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "EnfBurnout"
+rootProject.name = "EnfBurn"
 include(":app")

@@ -85,9 +85,9 @@ object AboutAppScreen : Screen {
                             fontWeight = FontWeight.Medium,
                             color = MaterialTheme.colorScheme.tertiary
                         )
-                        Text(text = "Burnout", fontWeight = FontWeight.Medium, fontSize = 40.sp)
+                        Text(text = "Burn", fontWeight = FontWeight.Medium, fontSize = 40.sp)
                     }
-                    Text(text = "Versão 1.0.0", fontWeight = FontWeight.Medium)
+                    Text(text = "Versão 2.0.0", fontWeight = FontWeight.Medium)
                 }
             }
             Text(text = stringResource(R.string.about_app_content), textAlign = TextAlign.Justify)

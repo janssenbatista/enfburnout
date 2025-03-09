@@ -57,7 +57,7 @@ object SplashScreen : Screen {
                     fontWeight = FontWeight.Medium,
                     color = MaterialTheme.colorScheme.tertiary
                 )
-                Text(text = "Burnout", fontWeight = FontWeight.Medium, fontSize = 40.sp)
+                Text(text = "Burn", fontWeight = FontWeight.Medium, fontSize = 40.sp)
             }
         }
     }

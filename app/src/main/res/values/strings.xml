@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">EnfBurnout</string>
+    <string name="app_name">EnfBurn</string>
     <string name="app_logo">app logo</string>
     <string name="privacy_policy_text">Nós respeitamos sua privacidade e estamos comprometidos com a proteção dos seus dados. Este aplicativo coleta informações fornecidas de forma anônima através desse questionário. Os dados coletados têm como objetivo ajudar a entender melhor o estado emocional dos usuários, para fins de análise estatística. Nenhuma informação será utilizada para identificar você individualmente.</string>
     <string name="privacy_policy_title">Política de Privacidade</string>
