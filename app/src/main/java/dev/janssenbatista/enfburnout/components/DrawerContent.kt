@@ -33,7 +33,6 @@ import dev.janssenbatista.enfburnout.features.about_app.AboutAppScreen
 import dev.janssenbatista.enfburnout.features.home.HomeScreen
 import dev.janssenbatista.enfburnout.features.other_diseases.OtherDiseasesScreen
 import dev.janssenbatista.enfburnout.features.support_services.SupportServicesScreen
-import dev.janssenbatista.enfburnout.features.take_care.TakeCareScreen
 import dev.janssenbatista.enfburnout.features.treatment.TreatmentScreen
 
 @Composable

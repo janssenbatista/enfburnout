@@ -1,7 +1,10 @@
 package dev.janssenbatista.enfburnout
 
+import android.content.Context
 import android.os.Bundle
+import android.speech.tts.TextToSpeech
 import androidx.activity.ComponentActivity
+import androidx.activity.compose.BackHandler
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Column
@@ -22,6 +25,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.material3.rememberDrawerState
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -29,6 +33,8 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.navigator.Navigator
@@ -46,16 +52,23 @@ import dev.janssenbatista.enfburnout.features.treatment.TreatmentScreen
 import dev.janssenbatista.enfburnout.features.whatis.WhatIsScreen
 import dev.janssenbatista.enfburnout.ui.theme.EnfBurnoutTheme
 import kotlinx.coroutines.launch
+import java.util.Locale
 
-class MainActivity : ComponentActivity() {
+class MainActivity : ComponentActivity(), TextToSpeech.OnInitListener {
+
+    private var tts: TextToSpeech? = null
+
     @OptIn(ExperimentalMaterial3Api::class)
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             EnfBurnoutTheme {
 
                 val coroutineScope = rememberCoroutineScope()
+                val context = LocalContext.current
+                tts = TextToSpeech(context, this@MainActivity)
                 val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
                 val scrollBehavior = TopAppBarDefaults.pinnedScrollBehavior()
                 var isQuestionHintDialogVisible by remember {
@@ -89,7 +102,10 @@ class MainActivity : ComponentActivity() {
                                                 navigator.lastItem::class.simpleName == TalkScreen::class.simpleName ||
                                                 navigator.lastItem::class.simpleName == ReferencesScreen::class.simpleName
                                             ) {
-                                                IconButton(onClick = { navigator.pop() }) {
+                                                IconButton(onClick = {
+                                                    navigator.pop()
+                                                    tts?.stop()
+                                                }) {
                                                     Icon(
                                                         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                                                         contentDescription = stringResource(R.string.go_back)
@@ -120,10 +136,36 @@ class MainActivity : ComponentActivity() {
                                                     )
                                                 }
                                             }
+                                            if (isSoundIconVisible(navigator)) {
+                                                IconButton(onClick = {
+                                                    if (tts?.isSpeaking == true) {
+                                                        tts?.stop()
+                                                    } else {
+                                                        playSound(context = context, navigator = navigator)
+                                                    }
+                                                }) {
+                                                    Icon(
+                                                        painter = painterResource(id = R.drawable.play),
+                                                        contentDescription = ""
+                                                    )
+                                                }
+                                            }
                                         }
                                     )
                                 }
                             }) { paddingValues ->
+
+                            BackHandler {
+                                tts?.stop()
+                                navigator.pop()
+                            }
+
+                            LaunchedEffect(key1 = navigator.lastItem) {
+                                tts?.isSpeaking.let {
+                                    tts?.stop()
+                                }
+                            }
+
                             Column(
                                 Modifier
                                     .padding(paddingValues)
@@ -144,7 +186,39 @@ class MainActivity : ComponentActivity() {
                         }
                     }
                 }
+
+
             }
+        }
+    }
+
+    override fun onInit(status: Int) {
+        if (status == TextToSpeech.SUCCESS) {
+            tts?.language = Locale("pt", "BR")
+        }
+    }
+
+    private fun speak(text: String) {
+        tts?.speak(text, TextToSpeech.QUEUE_FLUSH, null, null)
+    }
+
+    private fun isSoundIconVisible(navigator: Navigator): Boolean {
+        return navigator.lastItem::class.simpleName == WhatIsScreen::class.simpleName ||
+                navigator.lastItem::class.simpleName == TreatmentScreen::class.simpleName ||
+                navigator.lastItem::class.simpleName == OtherDiseasesScreen::class.simpleName ||
+                navigator.lastItem::class.simpleName == SupportServicesScreen::class.simpleName
+    }
+
+    private fun playSound(context: Context, navigator: Navigator) {
+        when(navigator.lastItem::class.simpleName) {
+            WhatIsScreen::class.simpleName ->
+                speak(context.getString(R.string.texto_esgotamento_profissional))
+            TreatmentScreen::class.simpleName ->
+                speak(context.getString(R.string.texto_tratamento))
+            OtherDiseasesScreen::class.simpleName ->
+                speak(context.getString(R.string.texto_esgotamento_profissional_e_outras_doencas))
+            SupportServicesScreen::class.simpleName ->
+                speak(context.getString(R.string.texto_servicos_de_apoio))
         }
     }
 }

@@ -53,4 +53,71 @@
     <string name="support_content_1_4">Existe também a aposentadoria por invalidez, ocorre quando o trabalhador não pode de forma alguma exercer sua função, os documentos requeridos para dar entrada no processo são os laudos médicos que conste permanentemente a incapacidade de permanecer no trabalho.</string>
     <string name="support_content_1_5">Essas são maneiras de resguardar o trabalhador e oferecer seguridade para tratamento e recurso financeiro para se manter dentro das necessidades cotidianas.</string>
     <string name="support_content_1_6">Comunicação de Acidente de Trabalho (CAT) para registro de adoecimento vinculado ao trabalho. Posteriormente, o encaminhamento para análise do INSS.</string>
+
+<!--  Textos para reprodução  -->
+    <string name="texto_esgotamento_profissional">
+        O que é o esgotamento profissional?
+        Esgotamento profissional ou síndrome de burnout é oriunda do ambiente de trabalho, sendo classificada como transtorno mental pelo CID-11 de 2022, ela possui três dimensões.
+        Exaustão Emocional.
+        É caracterizada como o aglomerado de sentimentos, provenientes do acúmulo do cotidiano. Sensação de incompetência, cansaço extremo, irritação, estresse, ansiedade, são sentimentos conflitantes e corriqueiros da exaustão emocional.
+        Despersonalização.
+        É melhor descrita como a sensação de separação do corpo e mente, quando a mente não consegue processar o que é para fazer, onde a pessoa está ou como ela conseguiu fazer determinada função, é o conflituo da personalidade no ambiente de trabalho, com acréscimo de agressividade, da insensibilidade emocional para com situações delicadas.
+        Redução de realização profissional.
+        Afeta o lugar de pertencimento do profissional, onde ocorre suas relações de crescimento profissional e financeiro, a desvalorização profissional comprime o potencial do trabalhador em exercer o seu potencial para o melhor serviço, compete com a baixa remuneração e incongruência para o mínimo de decência na vida, gera no profissional sentimentos conflitantes de incompetência profissional.
+        Você sabia que afeta principalmente os profissionais que estão ligados as relações públicas como profissionais da saúde, professores, serviços públicos, relações humanas?
+        Possíveis causas do esgotamento profissional (burnout).
+        Você sabe o que nome burnout significa?
+        “Burnout” significa queimar-se ou consumir-se, levando a tradução mais fiel para o português do brasil, sendo conhecida como síndrome de burnout ou esgotamento profissional.
+        O meio que permeia o esgotamento profissional é o ambiente de trabalho, logo, tudo o que esteja relacionado ao ambiente laboral é passível para síndrome, pode acontecer a curto ou longo prazo, com sinais sutis que ao decorrer do tempo pode apresentar dano ao trabalhador.
+        Mais o que pode levar ao estamento profissional?
+        Trabalhar por muitas horas e sem descanço\n
+        O estresse constante com o ambiente, colegas de trabalho e ou pacientes\n
+        A frustação de não se sentir valorizado e respeitado\n
+        A tristeza para realizar funções do trabalho ou ter rendimento no ambiente como se o trabalho prestado não fosse relevante e essencial\n
+        A fragilidade de sentimentos, raiva constante, choro, medo, ansiedade e apreensão\n
+        A desvalorização salarial e a sobrecarga de trabalho e funções, o tempo de qualidade negligenciado por possuir mais de um vínculo empregatício\n
+        Dores musculares, problemas de coluna, pernas, ombro, taquicardia, cefaleia e mãos são as queixas mais recorrentes dos trabalhadores\n
+        Falta de progressão de carreira e desmoralização do profissional por parte da gerência e pacientes\n
+        Diagnóstico.
+        O diagnóstico do esgotamento profissional acontece após um longo apurado de sintomas compatíveis com as dimensões da síndrome da burnout, aplicação de teste, consultas e exames são essenciais para fechar o diagnóstico correto, sendo concedido pelo médico especialista em psiquiatria ou saúde do trabalhador e o psicólogo.
+        Uma vez que o laudo é constatado, o trabalhador pode receber todos os benefícios previdenciários necessários para o afastamento de suas funções e tratamento correto da doença.
+    </string>
+    <string name="texto_tratamento">
+        Tratamento.
+        Medicamentoso.
+        O tratamento medicamentoso as vezes é a primeira opção de cuidado para o paciente em estado de esgotamento profissional, varia de grau e necessidade para o paciente, usualmente são usados ansiolíticos e antidepressivos para o quadro. É importante ressaltar que a prescrição de medicamentos deve acontecer por profissionais médicos e especialistas na sintomatologia.
+        Psicológico.
+        A terapia é outra medida utilizada como suporte para o tratamento do esgotamento profissional, tornando um amparo para o paciente em reconhecer os seus sentimentos e as fragilidades que o ambiente de trabalho cria no profissional, identificar potencias gatilhos geradores da síndrome, assim como também ansiedade e sobrecarga emocional. Faz parte do processo de se conhecer para saber os seus limites e impor limites para si mesmo.
+        Terapias alternativas.
+        Você já ouviu falar sobre terapias alternativas? Te falo mais sobre o uso delas e como elas são auxiliares no processo de tratamento.
+        Meditação.
+        O ato de meditar, traz consigo benefícios já comprovados pela ciência, melhora a respiração, acalma a ansiedade, desacelera os batimentos cardíacos e promove o auto controle. É uma atividade de exercício mental, rápida e de fácil acesso.
+        Aromaterapia.
+        Essa terapia quando associada a prática de massoterapia proporciona relaxamento do corpo e mente, mas ela também tem seu benefício apenas sendo difundida no ambiente ou no contato com a pele, a aromaterapia é a utilização da essência de óleo das ervas e flores medicinais que ajudam o paciente a relaxar, aliviar dores musculares e proporciona sensação de leveza.
+        Pratica de exercícios físicos.
+        Exercitar o corpo é beneficiar a mente também, além de promover mobilidade, resistência e definição, a pratica de exercício físico libera endorfina, hormônio responsável pela sensação de felicidade, beneficia o sono e mantém o corpo ativo, logico, toda prática deve ser acompanhada por um profissional de educação física ou especialista da prática que o paciente desejar.
+        Alimentação saudável.
+        Mas é claro que todo processo de autocuidado requer uma boa alimentação, regada de frutas, verduras, legumes, proteínas, fibras e ingestão de água. Com o auxílio de um profissional da nutrição, é possível regular o intestino, proporcionar saciedade e manter o corpo saudável sem precisar retirar alimentos que fazem parte da rotina do paciente, auxilia a promover hábitos saudáveis de compromisso com a sua alimentação.
+    </string>
+    <string name="texto_esgotamento_profissional_e_outras_doencas">
+        Esgotamento Profissional e outras doenças.
+        Você sabia que o esgotamento profissional pode ter causalidade com outras doenças?
+        A depressão é uma muito observada no ambiente de trabalho, que pode afetar a pessoa e causar uma tristeza profunda, sensação de desesperança e finalidade da vida. Faz com que pessoa não prossiga com atividades cotidianas, como funções do lar, autocuidado, e realização da profissão, sendo em seu caso mais grave a depressão maior.
+        O estresse é uma reação a um evento de medo, angustia e aflição que acontece por situações de preocupação e esgotamento. Está associado ao acumulo de tensão, trabalho e cansaço físico, que pode desencadear uma reação agressiva e intensa para a pessoa e o ambiente em que está.
+        A ansiedade é pauta constante em todas as faixas etárias nos últimos 10 anos, isso é reflexo da projeção do futuro, de situações que ainda não aconteceram, causa sentimentos de aflição, nervosismo e preocupação constante. Sendo um sentimento e reação natural do corpo, quando constante, a ansiedade se torna uma doença preocupante que pode dificultar a vida da pessoa.
+    </string>
+    <string name="texto_servicos_de_apoio">
+        Serviços de apoio.
+        No ano de 2021, a Organização Mundial da Saúde (OMS) classificou a síndrome de burnout / esgotamento profissional como uma doença ocupacional, dentro da Classificação Internacional de Doenças (CID-11) com o código (QD85) e no CID-10 o código (Z73.0).
+        Para a legislação brasileira o afastamento das atividades empregatícias com o diagnóstico de esgotamento profissional / síndrome de burnout é legal e consta como incapacidade de trabalho, através do apurado de exames e consultas que comprovem a síndrome.
+        O Instituto Nacional do Seguro Social (INSS) é o órgão responsável por conceder o auxilio doença, para poder da entrada no beneficio o INSS exige uma serie de documentos para sem analisados, tais documentos são: exames, atestados e laudos médicos comprovados para a síndrome, agendar a perícia, preencher requerimento no site “Meu INSS” ou pelo número 135.
+        Existe também a aposentadoria por invalidez, ocorre quando o trabalhador não pode de forma alguma exercer sua função, os documentos requeridos para dar entrada no processo são os laudos médicos que conste permanentemente a incapacidade de permanecer no trabalho.
+        Essas são maneiras de resguardar o trabalhador e oferecer seguridade para tratamento e recurso financeiro para se manter dentro das necessidades cotidianas.
+        Comunicação de Acidente de Trabalho (CAT) para registro de adoecimento vinculado ao trabalho. Posteriormente, o encaminhamento para análise do INSS.
+        Centro de Valorização da Vida (QVV) - 188.
+        Ministério da Previdência Social (INSS) - 135.
+        Delegacias Regionais do Trabalho - 158.
+        Centro de Referência a Saúde do Trabalhador - Cerest.
+        Instituto Nacional do Seguro Social – 135.
+    </string>
 </resources>
