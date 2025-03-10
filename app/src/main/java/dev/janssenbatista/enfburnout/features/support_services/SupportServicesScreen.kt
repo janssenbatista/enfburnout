@@ -31,7 +31,7 @@ object SupportServicesScreen : Screen {
         Column(
             Modifier
                 .padding(horizontal = 16.dp)
-                .padding(end = 16.dp)
+                .padding(bottom = 16.dp)
                 .verticalScroll(
                     rememberScrollState()
                 ), verticalArrangement = Arrangement.spacedBy(16.dp)) {
