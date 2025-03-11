@@ -1,5 +1,6 @@
 package dev.janssenbatista.enfburnout.features.talk
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dev.janssenbatista.enfburnout.BuildConfig
@@ -35,10 +36,11 @@ class TalkViewModel(private val apiService: ApiService) : ViewModel() {
                         }
                     }
                     viewModelScope.launch {
-                        apiService.sendAnswers(
+                        val response = apiService.sendAnswers(
                             apiKey = BuildConfig.API_KEY,
                             ApiRequest(answers = _talkState.value.answers.toIntArray())
                         )
+                        Log.d("RESPONSE", response.body().toString())
                     }
                     val result =
                         _talkState.value.answers.reduce { acc, next -> acc + next }
